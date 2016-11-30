@@ -1,8 +1,12 @@
 var nameInput = document.getElementById('name');
+var form = document.querySelector('form');
+var p = document.createElement('p');
 
 nameInput.addEventListener('keypress', function (event) {
   if (event.which == 13) {
-    console.log('Hello ' + nameInput.value + ', nice to meet ya!');
+    p.innerHTML = 'Hello ' + nameInput.value + ', nice to meet ya!';
+    console.log(p);
+    form.appendChild(p);
     event.preventDefault();
   }
 })
